@@ -43,13 +43,13 @@ export default function AllMovies({ onEdit }) {
       <h2 className="text-xl font-semibold mb-4 text-center">🎬 Todos os Filmes</h2>
 
       {movies.length === 0 ? (
-        <p className="text-center text-gray-500">Nenhum filme adicionado ainda.</p>
+        <p className="text-center text-black-500">Nenhum filme adicionado ainda.</p>
       ) : (
         <ul className="space-y-3">
           {movies.map((movie) => (
             <li
               key={movie._id}
-              className="bg-white shadow-md rounded-lg p-3 flex justify-between items-center"
+              className="bg-gray-300 shadow-md rounded-lg p-3 flex justify-between items-center"
             >
               <div>
                 <h3 className="font-bold text-lg">{movie.title}</h3>
@@ -61,7 +61,7 @@ export default function AllMovies({ onEdit }) {
                   {movie.watched ? (
                     <span className="text-green-600">Visto ✅</span>
                   ) : (
-                    <span className="text-orange-500">Por ver ⏳</span>
+                    <span className="text-red-500">Por ver ⏳</span>
                   )}
                 </p>
               </div>
@@ -69,13 +69,13 @@ export default function AllMovies({ onEdit }) {
               <div className="flex gap-2">
                 <button
                   onClick={() => onEdit(movie)} // abre modal de edição
-                  className="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                  className="px-3 py-1 bg-blue-700 text-white rounded-lg hover:bg-blue-900"
                 >
                   Editar
                 </button>
                 <button
                   onClick={() => handleDelete(movie._id)}
-                  className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                  className="px-3 py-1 bg-red-700 text-white rounded-lg hover:bg-red-900"
                 >
                   Excluir
                 </button>

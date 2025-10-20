@@ -29,12 +29,12 @@ export default function WatchedMovies() {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-semibold mb-4 text-center text-green-600">
-        🎬 Filmes já vistos
+      <h2 className="text-xl font-semibold mb-4 text-center text-black">
+        🎬 Filmes Assistidos
       </h2>
 
       {movies.length === 0 ? (
-        <p className="text-center text-gray-500">Nenhum filme marcado como visto ainda.</p>
+        <p className="text-center text-black">Nenhum filme marcado como visto ainda.</p>
       ) : (
         <ul className="space-y-3">
           {movies.map((movie) => (
@@ -44,7 +44,7 @@ export default function WatchedMovies() {
             >
               <div>
                 <h3 className="font-bold text-lg">{movie.title}</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-black">
                   {movie.genre} • {movie.year}
                 </p>
                 <p className="text-sm">

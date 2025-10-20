@@ -24,13 +24,13 @@ export default function NotWatchedMovies() {
     }
   };
 
-  if (loading) return <p className="text-center mt-4">Carregando filmes por ver...</p>;
+  if (loading) return <p className="text-center mt-4">Carregando filmes não assistidos...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-semibold mb-4 text-center text-orange-600">
-        🎬 Filmes por ver
+      <h2 className="text-xl font-semibold mb-4 text-center text-black">
+        🎬 Filmes Não Assistidos
       </h2>
 
       {movies.length === 0 ? (
@@ -42,7 +42,7 @@ export default function NotWatchedMovies() {
           {movies.map((movie) => (
             <li
               key={movie._id}
-              className="bg-white shadow-md rounded-lg p-3 flex justify-between items-center"
+              className="bg-gray-300 shadow-md rounded-lg p-3 flex justify-between items-center"
             >
               <div>
                 <h3 className="font-bold text-lg">{movie.title}</h3>
@@ -51,7 +51,7 @@ export default function NotWatchedMovies() {
                 </p>
                 <p className="text-sm">
                   ⭐ {movie.rating}/10 —{" "}
-                  <span className="text-orange-500">Por ver ⏳</span>
+                  <span className="text-red-500">Não Assistido</span>
                 </p>
               </div>
             </li>

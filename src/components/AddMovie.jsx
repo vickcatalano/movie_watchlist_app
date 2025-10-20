@@ -31,15 +31,14 @@ export default function AddMovie({ onClose, onAdded }) {
     setLoading(true);
 
     try {
-      // 🔹 Converte year e rating para Number antes de enviar
       await addMovie({
         ...form,
         year: Number(form.year),
         rating: Number(form.rating),
       });
 
-      if (onAdded) onAdded(); // Atualiza lista
-      if (onClose) onClose(); // Fecha modal
+      if (onAdded) onAdded();
+      if (onClose) onClose();
     } catch (err) {
       console.error(err);
       setError("Erro ao adicionar filme 😢");
@@ -49,9 +48,9 @@ export default function AddMovie({ onClose, onAdded }) {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-6 max-w-md mx-auto mt-8">
-      <h2 className="text-xl font-semibold text-center mb-4 text-blue-600">
-        ➕ Adicionar Filme
+    <div className="bg-gray-300 text-gray-800 shadow-lg rounded-xl p-6 max-w-md mx-auto mt-8">
+      <h2 className="text-xl font-semibold text-center mb-4 text-gray-800">
+        Adicionar Filme
       </h2>
 
       {error && <p className="text-red-500 text-center mb-3">{error}</p>}
@@ -62,7 +61,7 @@ export default function AddMovie({ onClose, onAdded }) {
           placeholder="Título"
           value={form.title}
           onChange={handleChange}
-          className="w-full border rounded-md p-2"
+          className="w-full border rounded-md p-2 text-black"
         />
         <input
           name="year"
@@ -70,14 +69,14 @@ export default function AddMovie({ onClose, onAdded }) {
           placeholder="Ano"
           value={form.year}
           onChange={handleChange}
-          className="w-full border rounded-md p-2"
+          className="w-full border rounded-md p-2 text-black"
         />
         <input
           name="genre"
           placeholder="Gênero"
           value={form.genre}
           onChange={handleChange}
-          className="w-full border rounded-md p-2"
+          className="w-full border rounded-md p-2 text-black"
         />
         <input
           name="rating"
@@ -87,7 +86,7 @@ export default function AddMovie({ onClose, onAdded }) {
           max="10"
           value={form.rating}
           onChange={handleChange}
-          className="w-full border rounded-md p-2"
+          className="w-full border rounded-md p-2 text-black"
         />
         <label className="flex items-center space-x-2">
           <input
@@ -102,7 +101,7 @@ export default function AddMovie({ onClose, onAdded }) {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+          className="w-full bg-[#800020] text-white py-2 rounded-md hover:bg-[#66001a] transition"
         >
           {loading ? "Adicionando..." : "Adicionar Filme"}
         </button>
