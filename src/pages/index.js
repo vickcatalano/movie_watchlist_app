@@ -49,7 +49,7 @@ export default function Home() {
               "0 0 10px #8B0000, 0 0 20px #8B0000, 0 0 30px #8B0000, 0 0 40px #a00000, 0 0 70px #a00000",
           }}
         >
-          Bytes Flix
+          Bytes Films
         </h1>
       </nav>
 
@@ -66,7 +66,7 @@ export default function Home() {
                 "0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #a00000, 0 0 70px #a00000",
             }}
           >
-            Bytes Flix
+            Bytes Films
           </h1>
         </div>
 
