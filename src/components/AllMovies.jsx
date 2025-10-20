@@ -59,9 +59,9 @@ export default function AllMovies({ onEdit }) {
                 <p className="text-sm">
                   ⭐ {movie.rating}/10 —{" "}
                   {movie.watched ? (
-                    <span className="text-green-600">Visto ✅</span>
+                    <span className="text-green-600">Assistido ✅</span>
                   ) : (
-                    <span className="text-red-500">Por ver ⏳</span>
+                    <span className="text-red-500">Não Assistido ⏳</span>
                   )}
                 </p>
               </div>

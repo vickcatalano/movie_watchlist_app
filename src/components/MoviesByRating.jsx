@@ -50,9 +50,9 @@ export default function MoviesByRating() {
                 <p className="text-sm">
                   ⭐ <span className="font-semibold">{movie.rating}</span>/10 —{" "}
                   {movie.watched ? (
-                    <span className="text-green-600">Visto ✅</span>
+                    <span className="text-green-600">Assistido ✅</span>
                   ) : (
-                    <span className="text-orange-500">Por ver ⏳</span>
+                    <span className="text-red-500">Não Assistido ⏳</span>
                   )}
                 </p>
               </div>
