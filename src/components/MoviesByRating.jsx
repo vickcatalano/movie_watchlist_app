@@ -52,7 +52,7 @@ export default function MoviesByRating() {
                   {movie.watched ? (
                     <span className="text-green-600">Assistido ✅</span>
                   ) : (
-                    <span className="text-red-500">Não Assistido ⏳</span>
+                    <span className="text-red-500">Não Assistido </span>
                   )}
                 </p>
               </div>
