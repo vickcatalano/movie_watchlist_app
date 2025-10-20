@@ -58,9 +58,9 @@ export default function EditMovie({ movie, onClose, onUpdated }) {
   if (!movie) return null; // Nada pra editar
 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-6 max-w-md mx-auto mt-8">
-      <h2 className="text-xl font-semibold text-center mb-4 text-green-600">
-        ✏️ Editar Filme
+    <div className="bg-gray-300 shadow-lg rounded-xl p-6 max-w-md mx-auto mt-8">
+      <h2 className="text-xl font-semibold text-center mb-4 text-black">
+        Editar Filme
       </h2>
 
       {error && <p className="text-red-500 text-center mb-3">{error}</p>}
@@ -105,13 +105,13 @@ export default function EditMovie({ movie, onClose, onUpdated }) {
             checked={form.watched}
             onChange={handleChange}
           />
-          <span>Já assistido?</span>
+          <span>Já assistido</span>
         </label>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+          className="w-full bg-[#800020] text-white py-2 rounded-md hover:bg-[#66001a] transition"
         >
           {loading ? "Atualizando..." : "Atualizar Filme"}
         </button>

@@ -24,7 +24,7 @@ export default function WatchedMovies() {
     }
   };
 
-  if (loading) return <p className="text-center mt-4">Carregando filmes vistos...</p>;
+  if (loading) return <p className="text-center mt-4">Carregando filmes assistidos...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
@@ -34,7 +34,7 @@ export default function WatchedMovies() {
       </h2>
 
       {movies.length === 0 ? (
-        <p className="text-center text-black">Nenhum filme marcado como visto ainda.</p>
+        <p className="text-center text-black">Nenhum filme marcado como assistido ainda.</p>
       ) : (
         <ul className="space-y-3">
           {movies.map((movie) => (
@@ -48,7 +48,7 @@ export default function WatchedMovies() {
                   {movie.genre} • {movie.year}
                 </p>
                 <p className="text-sm">
-                  ⭐ {movie.rating}/10 — <span className="text-green-600">Visto ✅</span>
+                  ⭐ {movie.rating}/10 — <span className="text-green-600">Assistido ✅</span>
                 </p>
               </div>
             </li>
