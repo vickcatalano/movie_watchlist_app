@@ -95,7 +95,7 @@ export default function AddMovie({ onClose, onAdded }) {
             checked={form.watched}
             onChange={handleChange}
           />
-          <span>Já assistido?</span>
+          <span>Já Assistido</span>
         </label>
 
         <button

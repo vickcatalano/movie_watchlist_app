@@ -35,7 +35,7 @@ export default function NotWatchedMovies() {
 
       {movies.length === 0 ? (
         <p className="text-center text-gray-500">
-          Nenhum filme pendente — bora assistir alguma coisa! 🍿
+          Nenhum filme pendente — Vamos assistir alguma coisa?
         </p>
       ) : (
         <ul className="space-y-3">
