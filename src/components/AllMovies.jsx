@@ -40,7 +40,7 @@ export default function AllMovies({ onEdit }) {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-semibold mb-4 text-center">🎬 Todos os Filmes</h2>
+      <h2 className="text-xl font-semibold mb-4 text-center">Todos os Filmes</h2>
 
       {movies.length === 0 ? (
         <p className="text-center text-black-500">Nenhum filme adicionado ainda.</p>

@@ -30,10 +30,7 @@ export default function Home() {
         backgroundImage: "url('/images/background.jpg')",
       }}
     >
-      {/* 🌓 Camada leve de transparência sobre a imagem */}
       <div className="absolute inset-0 bg-black opacity-30 pointer-events-none" />
-
-      {/* 🔻 Navbar vermelha escura */}
       <nav
         className="fixed top-0 left-0 w-full z-20 flex items-center px-6 py-3 shadow-md"
         style={{
@@ -52,11 +49,8 @@ export default function Home() {
           Bytes Films
         </h1>
       </nav>
-
-      {/* conteúdo principal */}
       <div className="relative z-10 pt-20 pb-16">
         <div className="flex justify-center items-center mb-6">
-          {/* 🟥 Título preto com pulsar vermelho */}
           <h1
             className="text-5xl font-light tracking-wide red-pulse"
             style={{
@@ -69,8 +63,6 @@ export default function Home() {
             Bytes Films
           </h1>
         </div>
-
-        {/* 🚀 Botões de navegação */}
         <div className="flex flex-wrap justify-center gap-2 mb-6">
           <button
             onClick={() => setCurrentView("all")}
@@ -100,27 +92,21 @@ export default function Home() {
             onClick={() => setShowAddModal(true)}
             className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800"
           >
-            + Adicionar Filme
+            Adicionar Filme
           </button>
         </div>
-
-        {/* 📄 Componentes */}
         <div key={reloadKey}>
           {currentView === "all" && <AllMovies onEdit={setEditMovie} />}
           {currentView === "watched" && <WatchedMovies key={reloadKey} />}
           {currentView === "notWatched" && <NotWatchedMovies key={reloadKey} />}
           {currentView === "rating" && <MoviesByRating key={reloadKey} />}
         </div>
-
-        {/* ➕ Modal Add */}
         {showAddModal && (
           <AddMovie
             onClose={() => setShowAddModal(false)}
             onAdded={handleAdded}
           />
         )}
-
-        {/* ✏️ Modal Edit */}
         {editMovie && (
           <EditMovie
             movie={editMovie}
@@ -129,8 +115,6 @@ export default function Home() {
           />
         )}
       </div>
-
-      {/* ⚫ Footer fixo */}
       <footer
         className="w-full text-center py-3 text-gray-300 fixed bottom-0 left-0 z-20"
         style={{
@@ -141,11 +125,8 @@ export default function Home() {
       >
         Copyright ©2025; Designed by Victória J. Catalano
       </footer>
-
-      {/* 💡 Estilos pulsantes */}
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
-
         @keyframes redPulse {
           0% {
             text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000,
@@ -160,11 +141,9 @@ export default function Home() {
               0 0 20px #a00000, 0 0 30px #a00000;
           }
         }
-
         .red-pulse {
           animation: redPulse 2s infinite ease-in-out;
         }
-
         @keyframes neonPulse {
           0% {
             text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000,
@@ -179,7 +158,6 @@ export default function Home() {
               0 0 30px #8b0000, 0 0 40px #a00000, 0 0 70px #a00000;
           }
         }
-
         .neon-pulse {
           animation: neonPulse 2s infinite ease-in-out;
         }

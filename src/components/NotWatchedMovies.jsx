@@ -30,7 +30,7 @@ export default function NotWatchedMovies() {
   return (
     <div className="p-4">
       <h2 className="text-xl font-semibold mb-4 text-center text-black">
-        🎬 Filmes Não Assistidos
+        Filmes Não Assistidos
       </h2>
 
       {movies.length === 0 ? (
